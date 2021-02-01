@@ -840,13 +840,13 @@ NEVER_INLINE NO_RETURN_DUE_TO_CRASH NOT_TAIL_CALLED void SlotVisitor::reportZapp
     unsigned subspaceHash = 0;
     size_t cellSize = 0;
 
-    m_heap.objectSpace().forEachBlock([&] (MarkedBlock::Handle* blockHandle) {
+    m_heap.objectSpace().forEachBlock(std::function([&] (MarkedBlock::Handle* blockHandle) {
         if (blockHandle->contains(cell)) {
             foundBlockHandle = blockHandle;
             return IterationStatus::Done;
         }
         return IterationStatus::Continue;
-    });
+    }));
 
     uint64_t variousState = 0;
     MarkedBlock* foundBlock = nullptr;

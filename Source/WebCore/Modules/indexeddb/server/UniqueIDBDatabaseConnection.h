@@ -54,7 +54,7 @@ public:
 
     const IDBResourceIdentifier& openRequestIdentifier() { return m_openRequestIdentifier; }
     UniqueIDBDatabase* database() { return m_database.get(); }
-    IDBServer* server() { return m_server.get(); }
+    IDBServer* server();
     IDBConnectionToClient& connectionToClient() { return m_connectionToClient; }
 
     void connectionPendingCloseFromClient();

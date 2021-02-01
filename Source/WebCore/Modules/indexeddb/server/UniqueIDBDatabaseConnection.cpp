@@ -82,6 +82,11 @@ void UniqueIDBDatabaseConnection::abortTransactionWithoutCallback(UniqueIDBDatab
     });
 }
 
+IDBServer* UniqueIDBDatabaseConnection::server()
+{
+    return m_server.get();
+}
+
 void UniqueIDBDatabaseConnection::connectionPendingCloseFromClient()
 {
     LOG(IndexedDB, "UniqueIDBDatabaseConnection::connectionPendingCloseFromClient - %s - %" PRIu64, m_openRequestIdentifier.loggingString().utf8().data(), identifier());

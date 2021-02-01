@@ -20,6 +20,7 @@
  */
 
 #include "config.h"
+#include "SVGLengthContext.h"
 #include "SVGLengthValue.h"
 
 #include "AnimationUtilities.h"

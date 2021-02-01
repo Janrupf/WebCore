@@ -19,6 +19,7 @@
 
 #pragma once
 
+#include "SVGUnitTypes.h"
 #include "SVGLengthValue.h"
 #include "SVGPreserveAspectRatioValue.h"
 

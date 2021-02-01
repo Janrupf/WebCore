@@ -44,6 +44,8 @@
 #include "OperandsInlines.h"
 #include "ProbeContext.h"
 #include "ProbeFrame.h"
+#include "GetByIdMetadata.h"
+#include "CodeBlockInlines.h"
 
 namespace JSC { namespace DFG {
 
